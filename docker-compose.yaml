@@ -1,0 +1,10 @@
+
+services:
+  nginx:
+    ports: 
+      - "80:80"
+    build:
+      dockerfile: ./
+    environment:
+      - COMPOSE_PROJECT_NAME
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
