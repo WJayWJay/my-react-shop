@@ -4,7 +4,8 @@ services:
     ports: 
       - "80:80"
     build:
-      dockerfile: ./
+      context: ./
+      dockerfile: Dockerfile
     environment:
       - COMPOSE_PROJECT_NAME
     command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
